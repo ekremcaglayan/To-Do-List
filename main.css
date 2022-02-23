@@ -22,6 +22,12 @@ body {
     color: #FFF;
 }
 
+#button2 {
+    position: absolute;
+    right: 100px;
+    top: 50px;
+}
+
 p {
     text-align: left;
     font-size: 15px;
