@@ -22,14 +22,28 @@ body {
     color: #FFF;
 }
 
-header {
-    padding: 2rem 1rem;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
+p {
+    text-align: left;
+    font-size: 15px;
+    padding-top: 0;
+    padding-left: 8rem;
+    padding-bottom: 1rem;
 }
 
 header h1 {
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 4rem;
+}
+
+header h3 {
+    text-align: left;
+    padding-top: 0.5rem;
+    padding-left: 6.5rem;
+    font-size: 15px;
+}
+
+main h1 {
     font-size: 2.5rem;
     font-weight: 300;
     color: var(--gray);
@@ -89,7 +103,7 @@ main {
 }
 
 .task-list {
-    padding: 0;
+    padding-top: 2rem;
 }
 
 .task-list h2 {
