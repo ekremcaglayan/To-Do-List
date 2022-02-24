@@ -2,7 +2,9 @@ window.addEventListener('load',() =>
 {
     const form = document.querySelector('#new-task-form');
     const input = document.querySelector('#new-task-input');
-    const list_el = document.querySelector('#tasks');
+    const ready = document.querySelector('#tasks');
+    const progress = document.querySelector('#tasks2')
+    const done = document.querySelector('#tasks3')
 
     form.addEventListener('submit', (e) => 
     {
@@ -47,7 +49,7 @@ window.addEventListener('load',() =>
 
         task_el.appendChild(task_actions_el);
 
-        list_el.appendChild(task_el);
+        ready.appendChild(task_el);
 
         input.value = "";
 
@@ -67,12 +69,46 @@ window.addEventListener('load',() =>
         //TASK EDIT PART
 
 
-        //TASK DELETE PART
+        //TASK DELETE PART READY
         task_delete_el.addEventListener('click', () => 
         {
-            list_el.removeChild(task_el);
+            ready.removeChild(task_el);
         });
-        //TASK DELETE PART
+        //TASK DELETE PART READY
+
+
+        //TASK DELETE PART PROGRESS
+        task_delete_el.addEventListener('click', () => 
+        {
+            progress.removeChild(task_el);
+        });
+        //TASK DELETE PART PROGRESS
+
+
+        //TASK DELETE PART DONE
+        task_delete_el.addEventListener('click', () => 
+        {
+            done.removeChild(task_el);
+        });
+        //TASK DELETE PART DONE
+
+
+        //TASK MOVE PART R->P
+        task_content_el.addEventListener('dblclick', () => 
+        {
+            ready.removeChild(task_el);
+            progress.appendChild(task_el);
+        });
+        //TASK MOVE PART R->P
+
+
+        //TASK MOVE PART P->D
+        progress.addEventListener('dblclick', () => 
+        {
+            progress.removeChild(task_el);
+            done.appendChild(task_el);
+        });
+        //TASK MOVE PART P->D
 
     });
 
