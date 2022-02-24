@@ -30,7 +30,7 @@
             // Find the distance between now an the count down date
             var distance = countDownDate - now;
 
-            // Time calculations for days, hours, minutes and seconds
+            // Time calculations for minutes and seconds
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -40,16 +40,15 @@
             // If the count down is finished, write some text 
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
+                document.getElementById("demo").innerHTML = "0";
             }
             }, 1000);
         </script>
         <button id="button2">Çıkış Yap</button>
-
     </header>
     <hr>
 
-    <main>
+    <main class="main1">
         <h1>Task List 2022</h1>
         <form id="new-task-form">
             <input 
@@ -63,9 +62,59 @@
                 value="Add task"
             >
         </form>
+    </main>
 
+    <main class="main2">   
         <section class="task-list">
             <h2>Ready To Start</h2>
+            <div id="tasks">
+                <!--
+                <div class="task">
+                    <div class="content">
+                        <input 
+                            type="text"
+                            class="text"
+                            value="My shiny task"
+                            readonly
+                        >
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+    </main>
+
+    <main class="main3">   
+        <section class="task-list">
+            <h2>In Progress</h2>
+            <div id="tasks">
+                <!--
+                <div class="task">
+                    <div class="content">
+                        <input 
+                            type="text"
+                            class="text"
+                            value="My shiny task"
+                            readonly
+                        >
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+    </main>
+
+    <main class="main4">   
+        <section class="task-list">
+            <h2>Done</h2>
             <div id="tasks">
                 <!--
                 <div class="task">
