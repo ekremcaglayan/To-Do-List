@@ -103,7 +103,7 @@ window.addEventListener('load',() =>
 
 
         //TASK MOVE PART P->D
-        progress.addEventListener('dblclick', () => 
+        task_input_el.addEventListener('dblclick', () => 
         {
             progress.removeChild(task_el);
             done.appendChild(task_el);
